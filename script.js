@@ -3,22 +3,28 @@ let inputContent;
 let ans=[];
 let final;
 let sign;
+let real;
 const inp=document.querySelector(`input`);
-grabElement =(number)=>{  
+grabElement =(number)=>{ 
+if(number>0||number<0){
 this.number=number ;
-inputContent=number;
-inp.value+=inputContent; 
+inp.value+=number;
+real=inp.value;
+} else{
+sign=number;
+inp.value+=sign;
+ }
+};
+addToArray=(oper)=>{
+    ans.push(real);
 };
 display =()=>{
-    math = `ans[ans.length-1] ${sign} Number(inp.value)`;
-    final = eval(math);
-    inp.value = final;  
-};
-arrayAdd=(oper)=>{
-    ans.push(Number(inp.value));
-    inp.value=""; 
-    sign=oper;
-};
+inp.value ="";
+ans.push(real);
+final =ans[ans.length-1] ;
+final = eval(final);
+inp.value = final;
+   };
 Delete=()=>{
     inp.value ="";
 }

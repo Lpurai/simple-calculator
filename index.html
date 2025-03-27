@@ -8,20 +8,68 @@
    <div class="input"><input type="text"></div>
     <div class="first">
         <button class="button-clear" onclick="Delete();">DELETE</button>
-        <button onclick="arrayAdd(`/`);">/</button> 
-        <button onclick="arrayAdd(`*`);">*</button>
+        <button onclick="grabElement(`/`);addToArray(`/`);">/</button> 
+        <button onclick="grabElement(`*`);addToArray(`*`);">*</button>
     </div>
     <div class="num">
         <button onclick="grabElement(`7`);">7</button>
         <button onclick="grabElement(`8`)">8</button>  
         <button onclick="grabElement(`9`)">9</button> 
-        <button onclick="arrayAdd(`-`);">-</button>
+        <button onclick="grabElement(`-`);addToArray(`-`);">-</button>
     </div>
     <div class="num">
         <button onclick="grabElement(`4`)">4</button>
         <button onclick="grabElement(`5`)">5</button>  
         <button onclick="grabElement(`6`)">6</button> 
-        <button onclick="arrayAdd(`+`);">+</button>
+        <button onclick="grabElement(`+`);addToArray(`+`);">+</button>
+    </div>
+    <div class="num2"> 
+        <button onclick="grabElement(`1`)">1</button>
+        <button onclick="grabElement(`2`)">2</button>  
+        <button onclick="grabElement(`3`)">3</button> 
+        <button class="equal" onclick="display();">=</button>
+    </div>
+    <div class="last"> 
+        <button onclick="grabElement(`0`)">0</button>
+        <button onclick="grabElement('00')">00</button>  
+        <button onclick="grabElement(`.`)">.</button> 
+        
+    </div>
+
+</div>
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+<div class="Container">
+   <div class="input"><input type="text"></div>
+    <div class="first">
+        <button class="button-clear" onclick="Delete();">DELETE</button>
+        <button onclick="grabElement(`/`);addToArray(`/`);">/</button> 
+        <button onclick="grabElement(`*`);addToArray(`*`);">*</button>
+    </div>
+    <div class="num">
+        <button onclick="grabElement(`7`);">7</button>
+        <button onclick="grabElement(`8`)">8</button>  
+        <button onclick="grabElement(`9`)">9</button> 
+        <button onclick="grabElement(`-`);addToArray(`-`);">-</button>
+    </div>
+    <div class="num">
+        <button onclick="grabElement(`4`)">4</button>
+        <button onclick="grabElement(`5`)">5</button>  
+        <button onclick="grabElement(`6`)">6</button> 
+        <button onclick="grabElement(`+`);addToArray(`+`);">+</button>
     </div>
     <div class="num2"> 
         <button onclick="grabElement(`1`)">1</button>
